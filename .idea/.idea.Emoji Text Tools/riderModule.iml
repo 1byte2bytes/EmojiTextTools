@@ -2,7 +2,10 @@
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../../EmojiDecoder" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../EmojiEncoder" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../EmojiDecoder/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../EmojiDecoder/obj" />
       <excludeFolder url="file://$MODULE_DIR$/../../EmojiEncoder/bin" />
       <excludeFolder url="file://$MODULE_DIR$/../../EmojiEncoder/obj" />
       <excludeFolder url="file://$MODULE_DIR$/../../packages" />

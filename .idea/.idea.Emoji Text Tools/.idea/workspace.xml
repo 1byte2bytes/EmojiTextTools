@@ -12,25 +12,50 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EmojiEncoder/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+            <state relative-caret-position="389">
+              <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="71" />
               <folding>
-                <marker date="1505356497000" expanded="true" signature="6:109" ph="..." />
-                <marker date="1505356497000" expanded="true" signature="133:1846" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="162:1844" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="215:1838" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="259:368" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="428:544" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="583:649" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="871:1828" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="969:1814" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="1252:1556" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="1311:1408" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="1437:1534" ph="{...}" />
-                <marker date="1505356497000" expanded="true" signature="1659:1796" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="6:109" ph="..." />
+                <marker date="1505357227000" expanded="true" signature="133:1846" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="162:1844" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="215:1838" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="259:368" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="428:544" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="583:649" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="871:1828" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="969:1814" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="1252:1556" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="1311:1408" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="1437:1534" ph="{...}" />
+                <marker date="1505357227000" expanded="true" signature="1659:1796" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EmojiDecoder/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+              <folding>
+                <marker date="1505357944000" expanded="true" signature="6:109" ph="..." />
+                <marker date="1505357944000" expanded="true" signature="133:2213" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="162:2211" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="215:1993" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="259:368" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="428:544" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="583:649" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="871:1983" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="969:1969" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="1156:1557" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="1232:1338" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="1367:1474" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="1660:1951" ph="{...}" />
+                <marker date="1505357944000" expanded="true" signature="2066:2205" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -39,12 +64,14 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/EmojiDecoder/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EmojiEncoder/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/EmojiEncoder/Program.cs" />
+        <option value="$PROJECT_DIR$/EmojiDecoder/Program.cs" />
       </list>
     </option>
   </component>
@@ -76,11 +103,25 @@
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Emoji Text Tools (1 project)" />
+              <option name="myItemId" value="Emoji Text Tools (2 projects)" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="EmojiEncoder" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Emoji Text Tools (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EmojiDecoder" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -106,7 +147,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Project.Default">
+  <component name="RunManager" selected=".NET Project.EmojiDecoder">
     <configuration default="true" type="DotNetProject" factoryName=".NET Project">
       <option name="PROJECT_PATH" value="" />
       <option name="PROJECT_KIND" value="None" />
@@ -119,7 +160,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+    <configuration default="false" name="EmojiEncoder" type="DotNetProject" factoryName=".NET Project">
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/EmojiEncoder/EmojiEncoder.csproj" />
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value=".NETFramework,Version=v4.5" />
@@ -131,8 +172,21 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    <configuration default="false" name="EmojiDecoder" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/EmojiDecoder/EmojiDecoder.csproj" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.5" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/EmojiDecoder/bin/Debug/EmojiDecoder.exe" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Desktop/encoded.txt $USER_HOME$/Desktop/decoded.txt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.EmojiEncoder" />
+      <item index="1" class="java.lang.String" itemvalue=".NET Project.EmojiDecoder" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -145,12 +199,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505355127690</updated>
-      <workItem from="1505355130252" duration="1552000" />
+      <workItem from="1505355130252" duration="2710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1552000" />
+    <option name="totallyTimeSpent" value="2710000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -196,22 +250,45 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/EmojiEncoder/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+        <state relative-caret-position="389">
+          <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="71" />
           <folding>
-            <marker date="1505356497000" expanded="true" signature="6:109" ph="..." />
-            <marker date="1505356497000" expanded="true" signature="133:1846" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="162:1844" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="215:1838" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="259:368" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="428:544" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="583:649" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="871:1828" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="969:1814" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="1252:1556" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="1311:1408" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="1437:1534" ph="{...}" />
-            <marker date="1505356497000" expanded="true" signature="1659:1796" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="6:109" ph="..." />
+            <marker date="1505357227000" expanded="true" signature="133:1846" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="162:1844" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="215:1838" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="259:368" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="428:544" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="583:649" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="871:1828" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="969:1814" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="1252:1556" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="1311:1408" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="1437:1534" ph="{...}" />
+            <marker date="1505357227000" expanded="true" signature="1659:1796" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmojiDecoder/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding>
+            <marker date="1505357944000" expanded="true" signature="6:109" ph="..." />
+            <marker date="1505357944000" expanded="true" signature="133:2213" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="162:2211" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="215:1993" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="259:368" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="428:544" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="583:649" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="871:1983" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="969:1969" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="1156:1557" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="1232:1338" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="1367:1474" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="1660:1951" ph="{...}" />
+            <marker date="1505357944000" expanded="true" signature="2066:2205" ph="{...}" />
           </folding>
         </state>
       </provider>

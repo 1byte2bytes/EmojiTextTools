@@ -1,0 +1,5 @@
+/Users/sydneyerickson/RiderProjects/Emoji Text Tools/EmojiDecoder/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/sydneyerickson/RiderProjects/Emoji Text Tools/EmojiDecoder/bin/Debug/EmojiDecoder.pdb
+/Users/sydneyerickson/RiderProjects/Emoji Text Tools/EmojiDecoder/bin/Debug/EmojiDecoder.exe
+/Users/sydneyerickson/RiderProjects/Emoji Text Tools/EmojiDecoder/obj/Debug/EmojiDecoder.exe
+/Users/sydneyerickson/RiderProjects/Emoji Text Tools/EmojiDecoder/obj/Debug/EmojiDecoder.pdb
