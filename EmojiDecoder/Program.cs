@@ -31,7 +31,7 @@ namespace EmojiDecoder
             using (BufferedStream bs = new BufferedStream(fs))
             using (StreamReader sr = new StreamReader(bs))
             {
-                bs.SetLength(1024*10);
+                bs.SetLength(1024*1024*3);
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
