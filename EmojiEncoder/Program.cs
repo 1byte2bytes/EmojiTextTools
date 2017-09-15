@@ -21,41 +21,37 @@ namespace EmojiEncoder
                 Console.WriteLine("Input file does not exist");
                 return;
             }
-
-            if (File.Exists(args[1]))
-            {
-                File.Delete(args[1]);
-            }
             
             using (FileStream fs = File.Open(args[0], FileMode.Open, FileAccess.Read))
             using (BufferedStream bs = new BufferedStream(fs))
             using (StreamReader sr = new StreamReader(bs))
             {
+                FileStream outfile = File.Open(args[1], FileMode.Create, FileAccess.Write, FileShare.None);
+
+                byte[] onebit = Encoding.Default.GetBytes("😂");
+                byte[] zerobit = Encoding.Default.GetBytes("😎");
+                int emojilen = onebit.Length;
+                
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
                     byte[] inputBytes = Encoding.Default.GetBytes(line);
                     var bits = new BitArray(inputBytes);
-            
-                    string newText = string.Empty;
-            
+
                     for (int i = 0; i < bits.Length; i++)
                     {
                         if (bits[i])
                         {
-                            newText += "😂";
+                            outfile.Write(onebit, 0, emojilen);
                         }
                         else
                         {
-                            newText += "😎";
+                            outfile.Write(zerobit, 0, emojilen);
                         }
                     }
-                    
-                    using (var stream = new FileStream(args[1], FileMode.Append))
-                    {
-                        stream.Write(Encoding.Default.GetBytes(newText), 0, newText.Length);
-                    }
                 }
+                
+                outfile.Close();
             }
         }
     }

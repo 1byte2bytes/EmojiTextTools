@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace EmojiDecoder
@@ -31,8 +32,10 @@ namespace EmojiDecoder
             using (BufferedStream bs = new BufferedStream(fs))
             using (StreamReader sr = new StreamReader(bs))
             {
-                bs.SetLength(1024*1024*3);
+                int bufferSize = 1024 * 1024; // 1 byte
+                bs.SetLength(bufferSize);
                 string line;
+                
                 while ((line = sr.ReadLine()) != null)
                 {
                     var bits = new BitArray(line.Length*8);
