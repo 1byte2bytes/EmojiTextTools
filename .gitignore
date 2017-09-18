@@ -302,3 +302,4 @@ __pycache__/
 OpenCover/
 
 .DS_Store
+.idea/
