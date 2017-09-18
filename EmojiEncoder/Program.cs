@@ -24,35 +24,29 @@ namespace EmojiEncoder
             
             using (FileStream fs = File.Open(args[0], FileMode.Open, FileAccess.Read))
             using (BufferedStream bs = new BufferedStream(fs))
-            using (StreamReader sr = new StreamReader(bs))
             {
-                FileStream outfile = File.Open(args[1], FileMode.Create, FileAccess.Write, FileShare.None);
+                FileStream outfs = File.Open(args[1], FileMode.Create, FileAccess.Write, FileShare.None);
+                BufferedStream outbs = new BufferedStream(outfs);
 
                 byte[] onebit = Encoding.Default.GetBytes("😂");
                 byte[] zerobit = Encoding.Default.GetBytes("😎");
                 int emojilen = onebit.Length;
                 
-                char[] bytes = new char[1];
+                byte[] bytes = new byte[1];
                 
-                while (sr.Read(bytes, 0, 1) != 0)
+                while (bs.Read(bytes, 0, 1) != 0)
                 {
-                    byte[] inputBytes = Encoding.Default.GetBytes(bytes);
-                    var bits = new BitArray(inputBytes);
+                    BitArray bits = new BitArray(bytes);
 
                     for (int i = 0; i < bits.Length; i++)
-                    {   
-                        if (bits[i])
-                        {
-                            outfile.Write(onebit, 0, emojilen);
-                        }
-                        else
-                        {
-                            outfile.Write(zerobit, 0, emojilen);
-                        }
+                    {
+                        // Write onebit if bit is 1, otherwise zerobit if bit is zero
+                        outbs.Write(bits[i] ? onebit : zerobit, 0, emojilen);
                     }
                 }
                 
-                outfile.Close();
+                outbs.Close();
+                outfs.Close();
             }
         }
     }
