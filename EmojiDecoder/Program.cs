@@ -51,11 +51,6 @@ namespace EmojiDecoder
                     }
                     else
                     {
-                        foreach (bool bit in bits)
-                        {
-                            Console.Write(bit ? "1" : "0");
-                        }
-                        Console.Write(" ");
                         outbs.Write(ConvertToByte(bits), 0, 1);
                         bitpos = 0;
                         bits = new BitArray(8);
@@ -80,11 +75,21 @@ namespace EmojiDecoder
         {
             if (bits.Count != 8)
             {
-                throw new ArgumentException("bits");
+                throw new ArgumentException("illegal number of bits");
             }
-            byte[] bytes = new byte[1];
-            bits.CopyTo(bytes, 0);
-            return bytes;
+
+            byte b = 0;
+            if (bits.Get(7)) b++;
+            if (bits.Get(6)) b += 2;
+            if (bits.Get(5)) b += 4;
+            if (bits.Get(4)) b += 8;
+            if (bits.Get(3)) b += 16;
+            if (bits.Get(2)) b += 32;
+            if (bits.Get(1)) b += 64;
+            if (bits.Get(0)) b += 128;
+            byte[] b2 = new byte[1];
+            b2[0] = b;
+            return b2;
         }
     }
 }
