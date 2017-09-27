@@ -66,6 +66,9 @@ namespace EmojiDecoder
                     }
                 }
                 
+                outbs.Write(ConvertToByte(bits), 0, 1);
+                
+                outbs.Flush();
                 outbs.Close();
                 outfs.Close();
             }

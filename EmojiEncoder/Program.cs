@@ -45,6 +45,7 @@ namespace EmojiEncoder
                     }
                 }
                 
+                outbs.Flush();
                 outbs.Close();
                 outfs.Close();
             }
