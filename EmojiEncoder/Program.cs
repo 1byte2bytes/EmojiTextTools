@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace EmojiEncoder
@@ -36,17 +37,25 @@ namespace EmojiEncoder
                 
                 while (bs.Read(bytes, 0, 1) != 0)
                 {
-                    BitArray bits = new BitArray(bytes);
+                    var bits = GetBits(bytes[0]);
 
-                    for (int i = 0; i < bits.Length; i++)
+                    foreach (var bit in bits)
                     {
-                        // Write onebit if bit is 1, otherwise zerobit if bit is zero
-                        outbs.Write(bits[i] ? onebit : zerobit, 0, emojilen);
+                        outbs.Write(bit ? onebit : zerobit, 0, emojilen);
                     }
                 }
                 
                 outbs.Close();
                 outfs.Close();
+            }
+        }
+
+        static IEnumerable<bool> GetBits(byte b)
+        {
+            for(int i = 0; i < 8; i++)
+            {
+                yield return (b & 0x80) != 0;
+                b *= 2;
             }
         }
     }
