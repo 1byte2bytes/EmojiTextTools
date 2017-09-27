@@ -32,45 +32,59 @@ namespace EmojiDecoder
             using (BufferedStream bs = new BufferedStream(fs))
             using (StreamReader sr = new StreamReader(bs))
             {
-                int bufferSize = 1024 * 1024; // 1 byte
-                bs.SetLength(bufferSize);
-                string line;
-                
-                while ((line = sr.ReadLine()) != null)
-                {
-                    var bits = new BitArray(line.Length*8);
+                FileStream outfs = File.Open(args[1], FileMode.Create, FileAccess.Write, FileShare.None);
+                BufferedStream outbs = new BufferedStream(outfs);
 
-                    int bitcount = 0;
-                    
-                    foreach (char emoji in line)
+                byte[] onebit = Encoding.UTF8.GetBytes("😂");
+                byte[] zerobit = Encoding.UTF8.GetBytes("😎");
+                int emojilen = onebit.Length;
+                
+                BitArray bits = new BitArray(8);
+                byte[] bytes = new byte[emojilen];
+                int bitpos = -1;
+                
+                while (bs.Read(bytes, 0, emojilen) != 0)
+                {
+                    if (bitpos < 7)
                     {
-                        if (emoji.ToString() == "😂")
-                        {
-                            bits.Set(bitcount, true);
-                        }
-                        else
-                        {
-                            bits.Set(bitcount, false);
-                        }
-                        
-                        bitcount++;
+                        bitpos++;
                     }
-                    
-                    using (var stream = new FileStream(args[1], FileMode.Append))
+                    else
                     {
-                        byte[] newData = BitArrayToByteArray(bits);
-                        char[] result = Encoding.UTF8.GetString(newData).ToCharArray();
-                        stream.Write(Encoding.Default.GetBytes(result), 0, result.Length);
+                        foreach (bool bit in bits)
+                        {
+                            Console.Write(bit ? "1" : "0");
+                        }
+                        Console.Write(" ");
+                        outbs.Write(ConvertToByte(bits), 0, 1);
+                        bitpos = 0;
+                        bits = new BitArray(8);
+                    }
+
+                    if (bytes.SequenceEqual(onebit)) // Read bit is 1
+                    {
+                        bits[bitpos] = true;
+                    }
+                    else
+                    {
+                        bits[bitpos] = false;
                     }
                 }
+                
+                outbs.Close();
+                outfs.Close();
             }
         }
-        
-        public static byte[] BitArrayToByteArray(BitArray bits)
+
+        static byte[] ConvertToByte(BitArray bits)
         {
-            byte[] ret = new byte[(bits.Length - 1) / 8 + 1];
-            bits.CopyTo(ret, 0);
-            return ret;
+            if (bits.Count != 8)
+            {
+                throw new ArgumentException("bits");
+            }
+            byte[] bytes = new byte[1];
+            bits.CopyTo(bytes, 0);
+            return bytes;
         }
     }
 }
