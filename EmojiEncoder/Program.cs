@@ -29,8 +29,8 @@ namespace EmojiEncoder
                 FileStream outfs = File.Open(args[1], FileMode.Create, FileAccess.Write, FileShare.None);
                 BufferedStream outbs = new BufferedStream(outfs);
 
-                byte[] onebit = Encoding.UTF8.GetBytes("😂");
-                byte[] zerobit = Encoding.UTF8.GetBytes("😎");
+                byte[] onebit = Encoding.UTF8.GetBytes("👌🏻");
+                byte[] zerobit = Encoding.UTF8.GetBytes("🤙🏻");
                 int emojilen = onebit.Length;
                 
                 byte[] bytes = new byte[1];
